@@ -1,0 +1,45 @@
+header {
+	display: flex;
+	position: fixed;
+	align-items: center;
+	justify-content: center;
+	background-color: #404040;
+	color: #f0f8ff;
+	padding: 20px 0;
+	width: 100%;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+body {
+	font-family: "Comic Sans ms", sans-serif;
+	background-color: #f0f8ff;
+	color: #333;
+	text-align: justify;
+	padding: 80px;
+}
+body.home-page {
+	padding-right: 200px;
+	padding-left: 220px;
+}
+
+.logo-container {
+	display: flex;
+	align-items: center;
+	gap: 4px;
+}
+.text-logo {
+	font-weight: bold;
+	font-size: 24px;
+	margin: 0;
+	display: flex;
+}
+.text-logo span:hover {
+	filter: brightness(1.4);
+	transition: 0.3s;
+}
+
+.orange {
+	color: #ff5e40;
+}
