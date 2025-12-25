@@ -7,15 +7,86 @@
 	<link rel="stylesheet" href="styles_english.css">
 </head>
 
-<header>
-	<div class="logo-container">
-		<h1 class="text-logo">
-			<span>THINK. </span>
-			<span>SHARE. </span>
-			<span class="orange">REPEAT. </span>
-		</h1>
-	</div>
-</header>
-<body class="home-page">
+<body>
+	<header>
+		<div class="logo-container">
+			<h1 class="text-logo">
+				<span>THINK. </span>
+				<span>SHARE. </span>
+				<span class="orange">REPEAT. </span>
+			</h1>
+		</div>
+	</header>
+	
+	<main class="content">
+		<article class="blog-post">
+			<h2>Research on School and Education</h2>
+			<p class="subtitle">
+				A short research based on answers from 8th grade students
+			</p>
+			<p>
+				School and education are very important parts of students’ lives. 
+				They help young people learn new things, build skills, and prepare for the future. 
+				The aim of this research is to present the opinions of 8th grade students from Sofia Mathematical High School 
+				about school subjects, foreign languages, and the role of school in real life.
+				The research is based on answers from 20 students from different profiles. 
+				Some students study mathematics and informatics, others are in physics profiles, there are German language classes, 
+				and a small group of students are more interested in natural sciences like chemistry and biology. 
+				The research focuses on three main questions related to school and education.
+			</p>
+		</article>
+	</main>
+	
+	<section class="section-with-chart">
+		<div class="text">
+			<h3>Most Important School Subjects</h3>
+			<p>
+				Mathematics is the most important subject for most students. 
+				Seventeen out of twenty students (85%) included mathematics in their top three subjects. 
+				They say that mathematics helps them think logically, solve problems, and understand other subjects like physics, informatics, and chemistry. 
+				Informatics and Information Technologies were chosen by fourteen students (70%). 
+				Students explain that programming and computer skills are very important in the modern world and will be useful in many future jobs. 
+				Physics was chosen by thirteen students (65%), mainly by students from physics profiles. 
+				They believe that physics helps them understand natural laws and how the world works. 
+				Foreign languages were included in the top three by thirteen students (65%). 
+				English is mentioned most often, but German is also important because of the language profiles in the school. 
+				Bulgarian Language and Literature was chosen by twelve students (60%). 
+				Students say that this subject helps them express their ideas better and understand texts more deeply. 
+				Chemistry and biology were mentioned by a smaller but clear group of students. 
+				Five students (25%) included chemistry and/or biology in their top three subjects. 
+				These students are more interested in natural sciences and explain that chemistry and biology help them understand life, health, and the structure of matter. 
+				Some of them say they are interested in medicine, pharmacy, or scientific research in the future.
+			</p>
+		</div>
+		<div class="chart-card">
+			<h4>Survey Results</h4>
+			<canvas id="subjectsChart"></canvas>
+		</div>
+	</section>
+	
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<script>
+	const ctx = document.getElementById('subjectsChart').getContext('2d');
+	const subjectsChart = new Chart(ctx, {
+		type: 'bar',
+		data: {
+			labels: ['Math', 'IT', 'Physics', 'Languages', 'Bulgarian', 'Chemistry/Biology'],
+			datasets: [{
+				label: 'Number of students',
+				data: [17, 14, 13, 13, 12, 5],
+				backgroundColor: '#ff5e40'
+			}]
+		},
+		options: {
+			responsive: true,
+			plugins: {
+				legend: { display: false }
+			},
+			scales: {
+				y: { beginAtZero: true }
+			}
+		}
+	});
+	</script>
 </body>
 </html>
