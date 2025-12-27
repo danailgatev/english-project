@@ -13,14 +13,14 @@
 			<h1 class="text-logo">
 				<span>THINK. </span>
 				<span>SHARE. </span>
-				<span class="orange">REPEAT. </span>
+				<span class="orange">REPEAT.</span>
 			</h1>
 		</div>
 	</header>
 	
 	<main class="content">
 		<article class="blog-post">
-			<h2>Research on School and Education</h2>
+			<h2>Research on School and Education</h2> 
 			<p class="subtitle">
 				A short research based on answers from 8th grade students
 			</p>
@@ -64,13 +64,60 @@
 		</div>
 	</section>
 	
+	<section class="section-with-chart">
+		
+		<div class="language-chart-wrapper">
+			<canvas id="languagesChart"></canvas>
+		</div>
+		
+		<div class="text">
+			<h3>Importance of Foreign Languages</h3>
+			<p>
+				All twenty students (100%) say that learning foreign languages in high school is very important. 
+				There is no student who thinks that languages are not useful. 
+				English is the most important foreign language according to fourteen students (70%). 
+				They explain that English is used everywhere: in technology, science, the internet, and communication with people from other countries. 
+				Many students say that most programming languages, websites, and learning materials are in English. 
+				German is also very important, especially in Sofia Mathematical High School. 
+				Eight students (40%) say that German is very useful. 
+				Students from German language classes believe that knowing German can help them study or work in countries like Germany, Austria, or Switzerland. 
+				They also say that German is important for engineering and technical education. 
+				Seven students (35%) think that learning two foreign languages is a big advantage. 
+				They believe that knowing more languages gives more opportunities in the future and helps them feel more confident when traveling or studying abroad.
+				However, now nobody thinks about learning languages other than English or German.
+			</p>
+		</div>
+	</section>
+	
+	<section class="section-with-chart">
+		<div class="text">
+			<h3>Is School Useful for Real Life?</h3>
+			<p>
+				The answers to the third question show that most students see school as an important place for personal development, 
+				not only as a place to learn facts and theories. 
+				Many students believe that school helps them grow as people and prepares them for future challenges. 
+				Fourteen students (70%) say that school teaches them discipline, responsibility, and good time management. 
+				They explain that homework, projects, and regular tests help them learn how to organize their day and plan their tasks better. 
+				Some students say that at first this is difficult, but over time it helps them become more independent. 
+				Thirteen students (65%) believe that subjects like mathematics, physics, chemistry, and biology help them think logically and solve real-life problems. 
+				These subjects teach students how to analyze information, look for patterns, and find correct solutions. 
+				Students say that these skills are useful not only in school, but also in everyday situations. 
+				Twelve students (60%) say that school prepares them to work under pressure, especially during tests, exams, and deadlines. 
+				They believe that learning how to stay calm and focused in stressful situations is an important life skill. 
+				At the same time, nine students (45%) think that school should teach more practical skills. 
+				They mention topics such as financial education, communication skills, teamwork, and problem-solving in real-life situations. 
+				Overall, students agree that school is useful, but it could become even better by combining academic knowledge with more practical learning.
+			</p>
+		</div>
+	</section>
+	
 	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 	<script>
 	const ctx = document.getElementById('subjectsChart').getContext('2d');
 	const subjectsChart = new Chart(ctx, {
 		type: 'bar',
 		data: {
-			labels: ['Math', 'IT', 'Physics', 'Languages', 'Bulgarian', 'Chemistry/Biology'],
+			labels: ['Math', 'IT', 'Physics', 'Langs', 'BUL', 'Chem/Bio'],
 			datasets: [{
 				label: 'Number of students',
 				data: [17, 14, 13, 13, 12, 5],
@@ -83,7 +130,44 @@
 				legend: { display: false }
 			},
 			scales: {
-				y: { beginAtZero: true }
+				y: {
+					beginAtZero: true
+				},
+				x: {
+					ticks: {
+						maxRotation: 0,
+						minRotation: 0,
+						font: {
+							size: 11
+						}
+					}
+				}
+			}
+		}
+	});
+	</script>
+	
+	<script>
+	const langCtx = document.getElementById('languagesChart').getContext('2d');
+	const languagesChart = new Chart(langCtx, {
+		type: 'pie',
+		data: {
+			labels: ['English', 'German', 'Both'],
+			datasets: [{
+				data: [12, 6, 2],
+				backgroundColor: [
+					'#ff5e40',
+					'#404040',
+					'#ffd6c9'
+				]
+			}]
+		},
+		options: {
+			responsive: true,
+			plugins: {
+				legend: {
+					position: 'bottom'
+				}
 			}
 		}
 	});
