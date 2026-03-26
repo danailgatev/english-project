@@ -71,7 +71,7 @@ p {
 
 .section-with-chart {
 	display: flex;
-	gap: 30px;
+	gap: 40px;
 	margin-top: 30px;
 	align-items: flex-start;
 	flex-wrap: wrap;
@@ -98,8 +98,34 @@ p {
 	margin-right: 0;
 }
 
+
 .subtitle {
 	color: #666;
 	font-size: 15px;
 	margin-bottom: 20px;
+}
+.read-more-container {
+    text-align: right;
+    margin-top: 25px;
+    padding-top: 15px;
+    border-top: 1px solid #f0e8e0;
+}
+
+.read-more-btn {
+    display: inline-block;
+    background-color: #ff5e40;
+    color: white;
+    padding: 10px 22px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 8px rgba(255, 94, 64, 0.25);
+}
+
+.read-more-btn:hover {
+    background-color: #e04e32;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(255, 94, 64, 0.35);
 }
