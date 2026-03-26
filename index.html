@@ -34,144 +34,37 @@
 				and a small group of students are more interested in natural sciences like chemistry and biology. 
 				The research focuses on three main questions related to school and education.
 			</p>
+			<div class="read-more-container">
+                <a href="school-research.html" class="read-more-btn">Read more</a>
+            </div>
 		</article>
 	</main>
 	
-	<section class="section-with-chart">
-		<div class="text">
-			<h3>Most Important School Subjects</h3>
-			<p>
-				Mathematics is the most important subject for most students. 
-				Seventeen out of twenty students (85%) included mathematics in their top three subjects. 
-				They say that mathematics helps them think logically, solve problems, and understand other subjects like physics, informatics, and chemistry. 
-				Informatics and Information Technologies were chosen by fourteen students (70%). 
-				Students explain that programming and computer skills are very important in the modern world and will be useful in many future jobs. 
-				Physics was chosen by thirteen students (65%), mainly by students from physics profiles. 
-				They believe that physics helps them understand natural laws and how the world works. 
-				Foreign languages were included in the top three by thirteen students (65%). 
-				English is mentioned most often, but German is also important because of the language profiles in the school. 
-				Bulgarian Language and Literature was chosen by twelve students (60%). 
-				Students say that this subject helps them express their ideas better and understand texts more deeply. 
-				Chemistry and biology were mentioned by a smaller but clear group of students. 
-				Five students (25%) included chemistry and/or biology in their top three subjects. 
-				These students are more interested in natural sciences and explain that chemistry and biology help them understand life, health, and the structure of matter. 
-				Some of them say they are interested in medicine, pharmacy, or scientific research in the future.
+	<main class="content">
+		<article class="blog-post">
+			<h2>Research on School Successful Celebrities</h2> 
+			<p class="subtitle">
+				10 remarkable personalities who started their journey at SMG
 			</p>
-		</div>
-		<div class="chart-card">
-			<h4>Survey Results</h4>
-			<canvas id="subjectsChart"></canvas>
-		</div>
-	</section>
-	
-	<section class="section-with-chart">
-		
-		<div class="language-chart-wrapper">
-			<canvas id="languagesChart"></canvas>
-		</div>
-		
-		<div class="text">
-			<h3>Importance of Foreign Languages</h3>
 			<p>
-				All twenty students (100%) say that learning foreign languages in high school is very important. 
-				There is no student who thinks that languages are not useful. 
-				English is the most important foreign language according to fourteen students (70%). 
-				They explain that English is used everywhere: in technology, science, the internet, and communication with people from other countries. 
-				Many students say that most programming languages, websites, and learning materials are in English. 
-				German is also very important, especially in Sofia Mathematical High School. 
-				Eight students (40%) say that German is very useful. 
-				Students from German language classes believe that knowing German can help them study or work in countries like Germany, Austria, or Switzerland. 
-				They also say that German is important for engineering and technical education. 
-				Seven students (35%) think that learning two foreign languages is a big advantage. 
-				They believe that knowing more languages gives more opportunities in the future and helps them feel more confident when traveling or studying abroad.
-				However, now nobody thinks about learning languages other than English or German.
+				Sofia Mathematical High School "Paisius of Hilendar" (SMG) is widely recognized as one of the most prestigious and successful secondary schools in Bulgaria. 
+				For decades, it has been educating some of the brightest young minds in the country and has produced a remarkable number of outstanding professionals 
+				in the fields of mathematics, computer science, physics, medicine, business, and culture. 
+				Many of its graduates have gone on to achieve significant success both in Bulgaria and on the international stage.
 			</p>
-		</div>
-	</section>
-	
-	<section class="section-with-chart">
-		<div class="text">
-			<h3>Is School Useful for Real Life?</h3>
+
 			<p>
-				The answers to the third question show that most students see school as an important place for personal development, 
-				not only as a place to learn facts and theories. 
-				Many students believe that school helps them grow as people and prepares them for future challenges. 
-				Fourteen students (70%) say that school teaches them discipline, responsibility, and good time management. 
-				They explain that homework, projects, and regular tests help them learn how to organize their day and plan their tasks better. 
-				Some students say that at first this is difficult, but over time it helps them become more independent. 
-				Thirteen students (65%) believe that subjects like mathematics, physics, chemistry, and biology help them think logically and solve real-life problems. 
-				These subjects teach students how to analyze information, look for patterns, and find correct solutions. 
-				Students say that these skills are useful not only in school, but also in everyday situations. 
-				Twelve students (60%) say that school prepares them to work under pressure, especially during tests, exams, and deadlines. 
-				They believe that learning how to stay calm and focused in stressful situations is an important life skill. 
-				At the same time, nine students (45%) think that school should teach more practical skills. 
-				They mention topics such as financial education, communication skills, teamwork, and problem-solving in real-life situations. 
-				Overall, students agree that school is useful, but it could become even better by combining academic knowledge with more practical learning.
+				This article is presenting the stories behind some of the most well-known personalities who graduated from SMG. 
+				There are many celebrities who have made important contributions in their respective fields, but the research follows only 10 different lives of theirs. 
+				Through their examples, we can see how the strong academic foundation, rigorous education, and unique environment of Sofia Mathematical High School 
+				They have played a significant role in shaping their future achievements and careers.
 			</p>
-		</div>
-	</section>
+			
+			<div class="read-more-container">
+                <a href="school-celebrities.html" class="read-more-btn">Read more</a>
+            </div>
+		</article>
+	</main>
 	
-	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-	<script>
-	const ctx = document.getElementById('subjectsChart').getContext('2d');
-	const subjectsChart = new Chart(ctx, {
-		type: 'bar',
-		data: {
-			labels: ['Math', 'IT', 'Physics', 'Langs', 'BLL', 'Chem/Bio'],
-			datasets: [{
-				label: 'Number of students',
-				data: [17, 14, 13, 13, 12, 5],
-				backgroundColor: '#ff5e40'
-			}]
-		},
-		options: {
-			responsive: true,
-			plugins: {
-				legend: { display: false }
-			},
-			scales: {
-				y: {
-					beginAtZero: true
-				},
-				x: {
-					ticks: {
-						maxRotation: 0,
-						minRotation: 0,
-						font: {
-							size: 11
-						}
-					}
-				}
-			}
-		}
-	});
-	</script>
-	
-	<script>
-	const langCtx = document.getElementById('languagesChart').getContext('2d');
-	const languagesChart = new Chart(langCtx, {
-		type: 'pie',
-		data: {
-			labels: ['English', 'German', 'Both'],
-			datasets: [{
-				data: [12, 6, 2],
-				backgroundColor: [
-					'#ff5e40',
-					'#404040',
-					'#ffd6c9'
-				]
-			}]
-		},
-		options: {
-			responsive: true,
-			plugins: {
-				legend: {
-					position: 'bottom'
-				}
-			}
-		}
-	});
-	</script>
 </body>
 </html>
-
